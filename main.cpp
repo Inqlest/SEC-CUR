@@ -3,7 +3,13 @@
 #include "Ground.h"
 #include "TC.h"
 #include "Exception.h"
-
+#include "Broom.h"
+#include "Camel.h"
+#include "Centaur.h"
+#include "Cross_Boots.h"
+#include "Eagle.h"
+#include "Fast_Camel.h"
+#include "Rug_Plane.h"
 
     void tc_register(int distance){
         int choice;
@@ -18,19 +24,19 @@
 
         switch (choice)
         {
-        case 1: TC::Ground("Cross_boots", 6, 60, distance);
+        case 1: TC::Cross_Boots("Cross_boots", 6, 60, distance);
             break;
-        case 2: TC::Air("Broom",20, distance);
+        case 2: TC::Broom("Broom",20, distance);
             break;
-        case 3: TC::Ground("Camel", 10, 30, distance);
+        case 3: TC::Camel("Camel", 10, 30, distance);
             break;
-        case 4: TC::Ground("Centaur", 15, 8, distance);
+        case 4: TC::Centaur("Centaur", 15, 8, distance);
             break;
-        case 5: TC::Air("Eagle", 8, distance);
+        case 5: TC::Eagle("Eagle", 8, distance);
             break;
-        case 6: TC::Ground("Fast_camel", 40, 10, distance);
+        case 6: TC::Fast_Camel("Fast_camel", 40, 10, distance);
             break;
-        case 7: TC::Air("Rug_plane", 10, distance);
+        case 7: TC::Rug_Plane("Rug_plane", 10, distance);
             break;
         case 0:
             break;
@@ -65,7 +71,7 @@ int main() {
     std::cout << "Enter distance " << std::endl;
     std::cin >> distance;
 
-    std::cout << "Minimun 2 vehicles " << "registered " << tc_count << std::endl;
+    std::cout << "Minimun 2 vehicles. " << "Registered " << tc_count << std::endl;
     std::cout << type << " " << "Distance: " << distance << std::endl;
 
 }

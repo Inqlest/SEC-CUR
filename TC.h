@@ -11,9 +11,8 @@ public:
     std::string get_name();
     int get_speed(); 
     int get_time();
-    int get_chilltime(int distance, std::string name, int count); 
-    int get_ratio(std::string name, int distance);
-    int get_namenumber(std::string name);
+    virtual int get_chilltime(int distance, std::string name, int count, int first, int second, int third); 
+    virtual int get_ratio(int distance);
         Transport() : Transport("", 0, 0, 0, 0, 0, 0){};
     };
 }
